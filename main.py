@@ -1,3 +1,4 @@
+
 from datetime import date
 from docxtpl import DocxTemplate
 
@@ -39,6 +40,22 @@ def getDate():
 
 
 dateString = getDate()
-companyName = input("Enter Company name: ")
+
+company_name = input("Enter Company name: ")
 jobId = input("Enter Job ID: ")
+location = input("Enter location: ")
 positionName = input("Enter position Name: ")
+
+
+doc = DocxTemplate("letter.docx")
+context = {
+    'date': dateString,
+    'company_name': company_name,
+    'jobId': jobId,
+    'location': location,
+    'positionName': positionName
+
+}
+
+doc.render(context)
+doc.save('dist\\' + company_name + '-' + jobId + '.docx')
