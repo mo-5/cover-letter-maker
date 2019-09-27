@@ -128,4 +128,4 @@ dmypy.json
 letter.docx
 .vscode
 main.py
-coverletterMaker
+coverletterMaker/
