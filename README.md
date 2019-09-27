@@ -1,4 +1,4 @@
-# py-coverLetterMaker
+# Cover Letter Maker
 
 I have developed this application to automate the resume making using a template.
 
