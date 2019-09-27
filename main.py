@@ -43,7 +43,9 @@ dateString = getDate()
 
 company_name = input("Enter Company name: ")
 jobId = input("Enter Job ID: ")
-location = input("Enter location: ")
+location = 'Ottawa'
+# address = input("Address: ")
+
 positionName = input("Enter position Name: ")
 
 
