@@ -1,6 +1,6 @@
 from datetime import date
 from docxtpl import DocxTemplate
-
+from os import getcwd
 
 def CoverLetter(companyName, id, location, positionName, date):
     doc = DocxTemplate("letter.docx")
@@ -14,7 +14,6 @@ def CoverLetter(companyName, id, location, positionName, date):
         'jobId': id,
         'location': location,
         'positionName': positionName
-        
     }
     doc.render(context)
     return doc
@@ -28,9 +27,12 @@ def getDate(date):
 
 company_name = input("Enter Company name: ")
 jobId = input("Enter Job ID: ")
-location = 'Ottawa'
+location = input("Enter Location:")
 positionName = input("Enter position Name: ")
 
 
 doc = CoverLetter(company_name, jobId, location, positionName, getDate(date))
-doc.save('dist\\' + company_name + '-' + jobId + '.docx')
+
+dist = getcwd()
+
+doc.save(dist + '\\' + company_name + '-' + jobId + '.docx')
