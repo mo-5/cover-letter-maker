@@ -4,13 +4,17 @@ from docxtpl import DocxTemplate
 
 def CoverLetter(companyName, id, location, positionName, date):
     doc = DocxTemplate("letter.docx")
+
+    if(location == ""): 
+        location = "Ottawa, Ontario"
+
     context = {
         'date': date,
         'company_name': companyName,
         'jobId': id,
         'location': location,
         'positionName': positionName
-
+        
     }
     doc.render(context)
     return doc
