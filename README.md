@@ -25,6 +25,10 @@ activate for linux or macos:
 ```bash
 . coverLetterMaker/bin/activate
 ```
+install all the requirements form the txt:
+```bash 
+pip install -r requirements.txt
+```
 edit the template in your root dir and call it letter.docx
 Add the following elements in the template file
 
