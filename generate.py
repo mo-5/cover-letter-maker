@@ -28,7 +28,7 @@ def getDate(date):
 
 company_name = input("Enter Company name: ")
 jobId = input("Enter Job ID: ")
-location = 'Ottawa'
+location = input("Enter location: ")
 positionName = input("Enter position Name: ")
 
 
